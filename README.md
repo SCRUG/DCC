@@ -38,7 +38,7 @@ Por favor no olvides registrarte si te interesa participar, y decirnos (aun si e
 Para poder confirmar la agenda necesitamos la confirmación lugar, pero esta es lo que tenemos en mente para hacer ese día.
 
  - **Fecha** : 10 de Agosto 2019
- - **Lugar**: San Carlos, Costa Rica
+ - **Lugar**: Campus Tecnológico local San Carlos (TEC Santa Clara), Costa Rica
 
 
 | Hora | Actividad |
