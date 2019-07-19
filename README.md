@@ -15,11 +15,11 @@ Haremos menciones especiales para los resultados a nivel de:
  - La exploración de datos con estilo de código más bonito
 
 ## ¿Quieres participar?
-El evento va ser en San Carlos [estamos por confirmar el lugar], y si vienes de lejos, anúncialo porque quizás puedes encontrar posibilidades de compartir transporte. Abre un tiquete en Github, y lo marcas con el tag "transporte".
+El evento va ser en el CTEC del Tecnológico de Costa Rica, en Santa Clara de San Carlos. Si vienes de lejos, anúncialo porque quizás puedes encontrar posibilidades de compartir transporte. Abre un tiquete en Github, y lo marcas con el tag "transporte".
 
 **[Registrate aqui](https://forms.gle/upj9GCyStGE3YRiU9)**
 
-Por favor no olvides registrarte si te interesa participar, y decirnos (aun si es el día antes) si por cualquier razón ya no vas a poder venir. Requiere bastante organización el que podamos trabajar en grupo, y por eso necesitamos saber el tamaño del grupo (numero de participantes) de antemano.
+Por favor **no olvides registrarte** si te interesa participar, y decirnos (aún si es el día antes) si por cualquier razón ya no vas a poder venir. Requiere bastante organización el que podamos trabajar en grupo, y por eso necesitamos saber el tamaño del grupo (numero de participantes) de antemano.
 
 ## ¿Qué necesitas llevar?
 
@@ -35,7 +35,7 @@ Por favor no olvides registrarte si te interesa participar, y decirnos (aun si e
 
 ## Agenda Preliminar
 
-Para poder confirmar la agenda necesitamos la confirmación lugar, pero esta es lo que tenemos en mente para hacer ese día.
+La agenda está sujeta a cambios menores o inclusión de más detalles de las actividades.
 
  - **Fecha** : 10 de Agosto 2019
  - **Lugar**: [Campus Tecnológico local San Carlos (TEC Santa Clara), Costa Rica](https://www.tec.ac.cr/ubicaciones/sede-regional-san-carlos)
