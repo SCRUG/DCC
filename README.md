@@ -1,6 +1,6 @@
-# Datatón Control Ciudadano
+# Datatón Colaboración Ciudadana
 
-El San Carlos R User Group (SCRUG) organiza el primer Datatón Control Ciudadano en Costa Rica el 10 de Agosto de 2019. El objetivo es que los participantes realicen análisis exploratorios con los datos abiertos disponibles del gobierno de Costa Rica usando el lenguaje de programación R.
+El San Carlos R User Group (SCRUG) organiza el primer Datatón Colaboración Ciudadana en Costa Rica el 10 de Agosto de 2019. El objetivo es que los participantes realicen análisis exploratorios con los datos abiertos disponibles del gobierno de Costa Rica usando el lenguaje de programación R.
 
 Vamos a trabajar en particular con los datos del [Poder Judicial](https://pj.poder-judicial.go.cr/index.php/rendicion-de-cuentas/datos-abiertos), [INAMU](https://www.inamu.go.cr/datosabiertos) y el [MINAE](http://datosabiertos.presidencia.go.cr/dataviews/245078/ministerio-de-ambiente-y-energia-2018/). Al iniciar el evento dividimos los participantes en áreas de interés comunes donde buscamos incluir en cada grupo usuarios R a diferentes nivel para crear un entorno de mentoría (los que más saben, ayudan a los que están recién iniciando).
 
@@ -10,7 +10,7 @@ El objetivo es que todo trabajo pueda ser consultado por otros ciudadanos, se ge
 
 Haremos menciones especiales para los resultados a nivel de:
 
- - La mejor historia que lograron contar con datos sobre control ciudadano.
+ - La mejor historia que lograron contar con datos sobre colaboración ciudadana.
  - La mejor visualización.
  - La exploración de datos con estilo de código más bonito
 
