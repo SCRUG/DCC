@@ -14,7 +14,7 @@ Haremos menciones especiales para los resultados a nivel de:
  - La mejor visualización.
  - La exploración de datos con estilo de código más bonito
 
-## ¿Quieres participar?
+## ¿Quieres participar? Registrate en el formulario
 El evento va ser en el CTEC del Tecnológico de Costa Rica, en Santa Clara de San Carlos. Si vienes de lejos, anúncialo porque quizás puedes encontrar posibilidades de compartir transporte. Abre un tiquete en Github, y lo marcas con el tag "transporte".
 
 **[Registrate aqui](https://forms.gle/upj9GCyStGE3YRiU9)**
