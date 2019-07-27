@@ -22,16 +22,19 @@ r-project.org:
 
 En RStudio busca la opción en el menu **Help >About RStudio**. Busca si tienes
 Versión 1.2.1335 o mayor.
-Si es menor instala una versión nueva ya sea con **Help > Check for Updates** o visitando las páginas de RStudio para bajar una nueva versión compatible con tu sistema:
+Si es menor instala una versión nueva ya sea con **Help > Check for Updates** o
+visitando las páginas de RStudio para bajar una nueva versión compatible con tu sistema:
 
     https://www.rstudio.com/products/rstudio/download/#download
 
 3. Que tienes los paquetes necesarios 
 
-Para que estes segur@ de tener todos los paquetes que vamos a utilizar lo mejor es que los instales de antemano. Con las siguientes instrucciones los puedes instalar todos:
+Para que estes seguro de tener todos los paquetes que vamos a utilizar lo mejor 
+es que los instales de antemano. Con las siguientes instrucciones los puedes
+instalar todos:
 
     install.packages(c("tidyverse", "readxl", "lubridate", 
-                ),
+                       "junr"),
                  dependencies = TRUE)
                  
 Para actualizar los paquetes que ya tienes en el computador, puedes ir a la 
