@@ -14,12 +14,15 @@ Haremos menciones especiales para los resultados a nivel de:
  - La mejor visualización.
  - La exploración de datos con mayor apego al [estilo de código](http://adv-r.had.co.nz/Style.html)
 
+*** 
 ## ¿Quieres participar? Registrate en el formulario
 El evento va ser en el CTEC del Tecnológico de Costa Rica, en Santa Clara de San Carlos. Si vienes de lejos, anúncialo porque quizás puedes encontrar posibilidades de compartir transporte. Abre un tiquete en Github, y lo marcas con el tag "transporte".
 
 **[Registrate aqui](https://forms.gle/upj9GCyStGE3YRiU9)**
 
 Por favor **no olvides registrarte** si te interesa participar y decirnos (aún si es el día antes) si por cualquier razón ya no vas a poder venir. Requiere bastante organización el que podamos trabajar en grupo y por eso necesitamos saber el tamaño del grupo (número de participantes) de antemano.
+
+***
 
 ## ¿Qué necesitas llevar?
 
@@ -28,10 +31,11 @@ Por favor **no olvides registrarte** si te interesa participar y decirnos (aún 
  - Muchas ganas de aprender a la par de otros.
  - Mente curiosa.
 
-### ¿Que pasa si quiero participar pero no sé usar R o no tengo experiencia con datos?
+#### ¿Que pasa si quiero participar pero no sé usar R o no tengo experiencia con datos?
 
 ¡No importa! **En el evento podrás aprender, colaborar y discutir ideas con otras personas que tienen más experiencia en estos temas**. ¡Solamente [hay que inscribirse](https://forms.gle/upj9GCyStGE3YRiU9)!
 
+***
 
 ## Agenda Preliminar
 
@@ -52,8 +56,12 @@ La agenda está sujeta a cambios menores o inclusión de más detalles de las ac
 | 14:00 - 15:00 | Presentaciones (informales) de los grupos - Contar la historia que obtuvieron, cuáles fueron los  puntos difíciles. |
 | 15:00 - 15:30 | Cierre y premios (menciones de honor) - Cerramos y validamos que todo lo que se hizo está compartido en Github. |
 
+***
+
 ## Código de conducta
 Este [código de conducta](https://github.com/datos-abiertos-cr/orientacion/blob/master/codigo-de-conducta.md) aplica para este evento.
+
+***
 
 ## Recursos
 
@@ -65,6 +73,7 @@ Tenemos recomendaciones que consideramos útiles para el el trabajo que desarrol
 | Instrucciones instalación software  | https://github.com/SCRUG/DCC/blob/master/instalación_software.md |
 | Recomendaciones para un EDA | https://github.com/SCRUG/DCC/blob/master/recomendaciones_eda.md |
 
+***
 
 ## Para patrocinadores
 Si usted tiene interés en participar con en este evento patrocinar la actividad, por favor contáctenos. Nos encantaría si podemos cubrir los siguiente rubros con patrocinio: 
