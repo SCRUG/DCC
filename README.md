@@ -19,7 +19,7 @@ El evento va ser en el CTEC del Tecnológico de Costa Rica, en Santa Clara de Sa
 
 **[Registrate aqui](https://forms.gle/upj9GCyStGE3YRiU9)**
 
-Por favor **no olvides registrarte** si te interesa participar, y decirnos (aún si es el día antes) si por cualquier razón ya no vas a poder venir. Requiere bastante organización el que podamos trabajar en grupo, y por eso necesitamos saber el tamaño del grupo (numero de participantes) de antemano.
+Por favor **no olvides registrarte** si te interesa participar y decirnos (aún si es el día antes) si por cualquier razón ya no vas a poder venir. Requiere bastante organización el que podamos trabajar en grupo y por eso necesitamos saber el tamaño del grupo (número de participantes) de antemano.
 
 ## ¿Qué necesitas llevar?
 
@@ -39,16 +39,17 @@ La agenda está sujeta a cambios menores o inclusión de más detalles de las ac
 
  - **Fecha** : 10 de Agosto 2019
  - **Lugar**: [Campus Tecnológico local San Carlos (TEC Santa Clara), Costa Rica](https://www.tec.ac.cr/ubicaciones/sede-regional-san-carlos)
+ - **Dirección en waze** Podrás usar esta [dirección en waze](https://www.waze.com/es/directions/costa-rica/santa-clara,-florencia/estacionamiento-ctec/180551784.1805452300.7258278.html) para llegar al datatón.
 
 
 | Hora | Actividad |
-|--------------|---------------------------|
-| 9:00 - 9:30 | Bienvenida al evento. |
-| 9:30 - 10:00 | **Armar grupos aclarar preguntas**. En los grupos dividimos las personas con diferentes niveles de experiencia para crear un entorno de mentoría (*mentoring*) donde los que saben más facilitan el camino para los que recién inician. |
+|-----|---------------------------|
+| 9:00 - 9:30 | Bienvenida al evento de parte de [ixpantia](https://www.ixpantia.com/es/), [golabs](https://www.go-labs.net/es/), [GAP](https://www.growthaccelerationpartners.com/) y [Gobierno Abierto](http://gobiernoabierto.go.cr/)|
+| 9:30 - 10:00 | **Crear grupos de trabajo y explicar dinámica**. En los grupos dividimos las personas con diferentes niveles de experiencia para crear un entorno de mentoría (*mentoring*) donde los que saben más facilitan el camino para los que recién inician. |
 | 10:00 - 12:00 | Primer !hack hack hack! - ¡A analizar y visualizar! |
-| 12:00 - 13:00 | Almuerzo - **¡Ojo!** El almuerzo viene por cuenta de cada participante (a menos que conseguimos un patrocinador) |
+| 12:00 - 13:00 | Almuerzo - **¡Ojo!** El almuerzo viene por cuenta de cada participante (a menos que conseguimos un patrocinador). Existe la soda del TEC que estará abierta el día del evento. |
 | 13:00 - 14:00 | Último !hack hack hack! - Tiempo cierre de proyectos Espacio para terminar el análisis y las visualizaciones  |
-| 14:00 - 1500 | Presentaciones (informales) de los grupos - Contar la historia que obtuvieron, cuáles fueron los  puntos difíciles. |
+| 14:00 - 15:00 | Presentaciones (informales) de los grupos - Contar la historia que obtuvieron, cuáles fueron los  puntos difíciles. |
 | 15:00 - 15:30 | Cierre y premios (menciones de honor) - Cerramos y validamos que todo lo que se hizo está compartido en Github. |
 
 ## Código de conducta
@@ -61,4 +62,7 @@ Si usted tiene interés en participar con en este evento patrocinar la actividad
  - Café / refrescos durante las sesiones
  - Almuerzo (en el caso idóneo podemos ofrecer almuerzo a los participantes).
  - Estamos abiertos a sugerencia.
+
+
+
 
