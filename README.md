@@ -55,6 +55,17 @@ La agenda está sujeta a cambios menores o inclusión de más detalles de las ac
 ## Código de conducta
 Este [código de conducta](https://github.com/datos-abiertos-cr/orientacion/blob/master/codigo-de-conducta.md) aplica para este evento.
 
+## Recursos
+
+Tenemos recomendaciones que consideramos útiles para el el trabajo que desarrollaremos en el datatón.
+
+| Tema | Recurso |
+| ---- | ------- |
+| Enlaces para materiales | https://github.com/SCRUG/DCC/blob/master/recursos.md |
+| Instrucciones instalación software  | https://github.com/SCRUG/DCC/blob/master/instalación_software.md |
+| Recomendaciones para un EDA | https://github.com/SCRUG/DCC/blob/master/recomendaciones_eda.md |
+
+
 ## Para patrocinadores
 Si usted tiene interés en participar con en este evento patrocinar la actividad, por favor contáctenos. Nos encantaría si podemos cubrir los siguiente rubros con patrocinio: 
 
