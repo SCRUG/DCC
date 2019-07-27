@@ -36,3 +36,6 @@ recursos que se pueden revisar de manera gratuita.
 
 - ¿Porqué estilo en R? En esta guía encontrarás respuesta a esta pregunta y además recomendaciones sobre el estilo que deberías de implementar.
 
+[Hojas de referencia](https://www.rstudio.com/resources/cheatsheets/)
+
+- Las hojas de referencia son bastante útiles para cuando queremos recordar de manera rápida los argumentos de funciones o bien, bajo esquemas cuál es el resultado que tendremos de una función al aplicarla a nuestros datos. Recuerda que en ese enlace están disponibles hojas de referencia traducidas al español.
