@@ -12,7 +12,7 @@ Haremos menciones especiales para los resultados a nivel de:
 
  - La mejor historia que lograron contar con datos sobre colaboración ciudadana.
  - La mejor visualización.
- - La exploración de datos con estilo de código más bonito
+ - La exploración de datos con mayor apego al [estilo de código](http://adv-r.had.co.nz/Style.html)
 
 ## ¿Quieres participar? Registrate en el formulario
 El evento va ser en el CTEC del Tecnológico de Costa Rica, en Santa Clara de San Carlos. Si vienes de lejos, anúncialo porque quizás puedes encontrar posibilidades de compartir transporte. Abre un tiquete en Github, y lo marcas con el tag "transporte".
@@ -23,14 +23,14 @@ Por favor **no olvides registrarte** si te interesa participar, y decirnos (aún
 
 ## ¿Qué necesitas llevar?
 
- - Computadora con R y RStudio y git instalado (últimas versiones)
+ - Computadora con [R](https://www.r-project.org/), [RStudio](https://www.rstudio.com/products/rstudio/download/) y [git](https://git-scm.com/) instalado (**últimas versiones**)
  - Un usuario en Github (hay instrucciones aquí)
  - Muchas ganas de aprender a la par de otros.
  - Mente curiosa.
 
-**¿Que pasa si quiero participar pero no sé usar R o no tengo experiencia con datos?**
+### ¿Que pasa si quiero participar pero no sé usar R o no tengo experiencia con datos?
 
-¡No importa! En el evento podrás aprender, colaborar y discutir ideas con otras personas que tienen más experiencia en estos temas. ¡Solamente [hay que inscribirse](https://forms.gle/upj9GCyStGE3YRiU9)!
+¡No importa! **En el evento podrás aprender, colaborar y discutir ideas con otras personas que tienen más experiencia en estos temas**. ¡Solamente [hay que inscribirse](https://forms.gle/upj9GCyStGE3YRiU9)!
 
 
 ## Agenda Preliminar
