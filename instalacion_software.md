@@ -37,6 +37,10 @@ instalar todos:
                        "junr"),
                  dependencies = TRUE)
                  
+Recuerda que el `tidyverse` se compone de los paquetes `ggplot2`, `dplyr`,
+`tidyr`, `readr`, `purrr`, `tibble`, `stringr` y `forcats`. Cuando instalas
+el `tidyverse` instalas todos estos paquetes.
+
 Para actualizar los paquetes que ya tienes en el computador, puedes ir a la 
 opción en el menú **Packages > update > select all > install** y de esta 
 manera tendrás las versiones más recientes.
