@@ -16,7 +16,10 @@ Haremos menciones especiales para los resultados a nivel de:
 
 *** 
 ## ¿Quieres participar? Registrate en el formulario
-El evento va ser en el CTEC del Tecnológico de Costa Rica, en Santa Clara de San Carlos. Si vienes de lejos, anúncialo porque quizás puedes encontrar posibilidades de compartir transporte. Abre un tiquete en Github, y lo marcas con el tag "transporte".
+El evento va ser en el CTEC del Tecnológico de Costa Rica, en Santa Clara de San Carlos. Si vienes de lejos, anúncialo porque quizás puedes encontrar posibilidades de compartir transporte. 
+
+Tenemos un [tiquete en Github](https://github.com/SCRUG/DCC/issues/8) en el
+cual podemos coordinar el transporte que estará disponible.
 
 **[Registrate aqui](https://forms.gle/upj9GCyStGE3YRiU9)**
 
@@ -70,7 +73,7 @@ Tenemos recomendaciones que consideramos útiles para el el trabajo que desarrol
 | Tema | Recurso |
 | ---- | ------- |
 | Enlaces para materiales | https://github.com/SCRUG/DCC/blob/master/recursos.md |
-| Instrucciones instalación software  | https://github.com/SCRUG/DCC/blob/master/instalación_software.md |
+| Instrucciones instalación software  | https://github.com/SCRUG/DCC/blob/master/instalacion_software.md |
 | Recomendaciones para un EDA | https://github.com/SCRUG/DCC/blob/master/recomendaciones_eda.md |
 
 ***
