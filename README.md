@@ -82,7 +82,30 @@ Tenemos recomendaciones que consideramos útiles para el el trabajo que desarrol
 
 ***
 
+## ¿Quienes organizan?
+
+El datatón surge como idea a partir de un proyecto de fin de semana para
+explorar datos abiertos. Conforme aumentó el interés en estos decidimos
+abrirlo para aumentar la participación de personas inclinadas hacia la
+ciencia de datos y los datos abiertos para así compartir lo que hemos aprendido en el camino y aprender de otros, es decir hacer crecer la
+comunidad datera del país.
+
+
+| Ronny Hernández Mora | Erick Calderón Morales | Frans van Dunné |
+|--------------------- | ---------------------- | --------------- |
+| ![](docs/ronny.png) | ![](docs/erick.png) | ![](docs/frans.png)
+| [Página personal](http://ronnyhdez.rbind.io/) | [Perfil Github](https://github.com/ecamo19)   | [Página personal](http://www.fransvandunne.com/) |
+
+
+
 ## Para patrocinadores
+
+Agradecemos a las siguientes empresas y organizaciones por su apoyo al
+evento:
+
+
+
+
 Si usted tiene interés en participar con en este evento patrocinar la actividad, por favor contáctenos. Nos encantaría si podemos cubrir los siguiente rubros con patrocinio: 
 
  - Premios para los participantes
