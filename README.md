@@ -93,7 +93,7 @@ comunidad datera del país.
 
 | Ronny Hernández Mora | Erick Calderón Morales | Frans van Dunné |
 |--------------------- | ---------------------- | --------------- |
-| ![](docs/ronny.png) | ![](docs/erick.png) | ![](docs/frans.png)
+| ![](img/ronny.png) | ![](img/erick.png) | ![](img/frans.png)
 | [Página personal](http://ronnyhdez.rbind.io/) | [Perfil Github](https://github.com/ecamo19)   | [Página personal](http://www.fransvandunne.com/) |
 
 
