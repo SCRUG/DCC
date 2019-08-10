@@ -39,3 +39,4 @@ docs/
 .html
 *.html
 
+/SICOP/datos/*
