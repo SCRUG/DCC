@@ -15,7 +15,7 @@ library(visdat)
 ```
 
 ```{r}
-sicop <- read.csv('datos/sicop.csv', sep = ";", encoding = "UTF-8")
+sicop <- read_delim('datos/sicop.csv', ';')
 names(sicop)
 vis_dat(sicop)
 ```
