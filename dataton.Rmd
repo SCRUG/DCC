@@ -1,0 +1,100 @@
+---
+title: "Análisis Exploratorio de Datos del Poder Judicial (Femicidios y Violencia Doméstica)"
+author: "Katherine Fernández Quiros"
+date: "8/10/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(readr)
+ base1=read_csv("C:/Users/kathf/Desktop/dataton/PJCROD_VIOLENCIADOMESTICA_V1.csv")
+#View(base1)
+```
+
+
+```{r}
+library(readr)
+ base2=read_csv("C:/Users/kathf/Desktop/dataton/PJCROD_FEMICIDIOS_V1.csv")
+View(base2)
+```
+
+```{r}
+colnames(base2)=c("Periodo","tipo","Femicidio","Cantidad")
+attach(base2)
+
+```
+
+```{r}
+colnames(base1)=c("Periodo","tipo","Femicidio","Cantidad",)
+attach(base1)
+
+```
+
+
+```{r}
+library(readr)
+base11 <- read_csv("PJCROD_POLICIALES_V1-2015.csv")
+#View(base11)
+attach(base11)
+
+```
+
+```{r}
+base2015=subset(base11,`GANZUA/VARILLA`=="FEMICIDIO")
+```
+```
+
+
+```{r} 
+library(readr)
+basepol <- read_csv("C:/Users/kathf/Downloads/PJCROD_POLICIALES_V1-2016.csv.crdownload")
+#View(basepol)
+attach(basepol)
+```
+
+```{r}
+base2016=subset(basepol,HURTO=="FEMICIDIO")
+#2016 no posee femicidios 
+
+
+
+```
+
+```{r}
+library(readr)
+base <- read_csv("PJCROD_POLICIALES_V1-2017.csv")
+#View(base)
+```
+
+```{r}
+base2017=subset(base,`POR DESCUIDO`=="FEMICIDIO")
+
+
+```
+
+```{r}
+library(readr)
+base2018pol <- read_csv("C:/Users/kathf/Downloads/PJCROD_POLICIALES_V1-2018.csv")
+#View(base2018pol)
+attach(base2018pol)
+
+```
+
+```{r}
+base2018=subset(base2018pol,BOQUETE=="FEMICIDIO")
+
+```
+
+```{r}
+bases=rbind(base2015,base2017,base2018)
+femicidios=save(bases,file="femicidios.Rdata")
+
+
+```
+
+
+

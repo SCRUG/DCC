@@ -1,0 +1,50 @@
+---
+title: "Análisis Exploratorio de Datos del Poder Judicial (Femicidios y Violencia Doméstica)"
+author: "Adalberto Cubillo"
+date: "8/10/2019"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Lectura de Datos
+
+```{r}
+# Se carga la información de violencia doméstica.
+datos_violencia_dom <- read.csv("PJCROD_VIOLENCIADOMESTICA_V1.csv", header = FALSE)
+
+datos_femicidios <- load("~/Documents/Data Science/Projects/dataton-sc/femicidios.Rdata")
+
+# Se incluyen los nombres de las variables al dataset.
+headers <- c("Anno",	"Mes",	"NombreMes",	"NombreMateria",	"NombreCircuito",	"NombreDespacho",	"NombreTipoDespacho",	"CirculanteInicial",	"CirculanteInicialLeg",	"Entrados",	"TestimoniosPiezas",	"Legajos",	"Reentrados",	"TerminadosXImcompetencia",	"AbandonadosOInactivos",	"Terminasdos",	"CirculanteFinal",	"CirculanteFinalLegajos")
+names(datos_violencia_dom) <- headers
+
+# Quitar variables que no se ocupan.
+datos_violencia_reducido <- datos_violencia_dom[ , c("Anno",	"Mes", "NombreCircuito")]
+
+# Removemos los valores de "Mes" que poseen NAs. 
+datos_violencia_no_nas <- datos_violencia_reducido[!is.na(datos_violencia_reducido$Mes), ]
+
+# Removemos los valores de "Mes" que no están en el rango de 1 a 12.
+datos_violencia_tidy <- datos_violencia_no_nas[(datos_violencia_no_nas$Mes %in% c(1:12)), ]
+
+# Cambiar el tipo de datos de la variable "NombreCircuito". 
+datos_violencia_tidy$NombreCircuito <- as.character(datos_violencia_tidy$NombreCircuito)
+
+library(stringr)
+library(tidyverse)
+
+provincias <- strsplit(datos_violencia_tidy$NombreCircuito, split = " DE ")
+datos_violencia_tidy$Provincia <- unlist(provincias)[2*(1:length(datos_violencia_tidy$NombreCircuito))]
+
+# No funciona correctamente. 
+# provincias <- strsplit(datos_violencia_tidy$Provincia, split = " \\(")
+# datos_violencia_tidy$Provincia <- unlist(provincias)[2*(1:length(datos_violencia_tidy$NombreCircuito)) - 1]
+
+unique(datos_violencia_tidy$Provincia)
+  
+```
