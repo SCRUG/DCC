@@ -79,6 +79,7 @@ Tenemos recomendaciones que consideramos útiles para el el trabajo que desarrol
 | Enlaces para materiales | https://github.com/SCRUG/DCC/blob/master/recursos.md |
 | Instrucciones instalación software  | https://github.com/SCRUG/DCC/blob/master/instalacion_software.md |
 | Recomendaciones para un EDA | https://github.com/SCRUG/DCC/blob/master/recomendaciones_eda.md |
+| Uso de git | http://ronnyhdez.rbind.io/post/control-versiones-git/ |
 
 ***
 
