@@ -104,14 +104,9 @@ Agradecemos a las siguientes empresas y organizaciones por su apoyo al
 evento:
 
 
+![](img/gracias.png)
 
 
-Si usted tiene interés en participar con en este evento patrocinar la actividad, por favor contáctenos. Nos encantaría si podemos cubrir los siguiente rubros con patrocinio: 
-
- - Premios para los participantes
- - Café / refrescos durante las sesiones
- - Almuerzo (en el caso idóneo podemos ofrecer almuerzo a los participantes).
- - Estamos abiertos a sugerencia.
 
 
 
