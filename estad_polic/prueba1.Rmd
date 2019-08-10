@@ -1,0 +1,74 @@
+---
+title: "Estatísticas Policiales del Poder Judicial de Costa Rica"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+always_allow_html: yes
+output:
+  # html_document:
+  #   code_folding: hide
+  #   theme: spacelab
+  #   toc: yes
+  #   toc_float:
+  #     collapsed: no
+  
+  rmdformats::readthedown:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    code_folding: hide
+editor_options:
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readxl)
+library(ggmap)
+library(rgdal)
+library(tmap)
+library(sf)
+source("policia.R")
+```
+
+# Bases de datos dispobibles en el environment
+```{r}
+ls() 
+```
+
+## Diferencia por sexo en cada año
+```{r}
+
+```
+
+
+```{r}
+delitos_canton <- delitos_canton %>% mutate(delitos/poblacion)
+
+tmap_mode("view")
+tm_shape(delitos_canton) +
+  tm_polygons(col = "poblacion", palette = "Blues", n = 8, id= "dist_nom1")+
+#   tm_shape(delitos_canton)+
+#   tm_dots(col = "yellow", size = "componente", scale = 1, alpha = 0.5)
+tm_view(set.view = 7.5)
+```
+
+
+
+```{r}
+library(collapsibleTree)
+  collapsibleTreeSummary(
+    bases_polic %>% group_by( Delito, Edad, ano) %>% summarise(n= n()),
+    hierarchy = c( "Delito", "Edad", "ano"),
+  
+  
+      root = "base_polic",
+      width = 800,
+      attribute = "n",
+      zoomable = FALSE
+  )
+
+
+```
+
