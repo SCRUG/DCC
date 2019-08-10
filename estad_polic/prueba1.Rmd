@@ -33,6 +33,16 @@ library(highcharter)
 source("policia.R")
 ```
 
+# Preguntas
+Basados en la exploración de datos abiertos provistos por el Poder Judicial, generamos las siguientes preguntas.
+
+-¿Cuál es la tendencia de crímenes por tipo de delito por año?
+
+-¿Cuál es el mes de mayor incidencia de ocurrencia de cada delito?
+
+-¿Cuál es la víctima más común por género?
+
+-¿Cuales son los tipos de delitos más frecuentes por provincia y por cantón?
 
 # Bases de datos dispobibles en el environment
 ```{r}
@@ -45,7 +55,7 @@ $$indice delitos_{t, d} = 100 * delitos_{t, d} / poblacion_{t, d}  $$
 
 Se tomaron las bases de datos del Poder Judicial años 2015-2018 y se unieron a las proyecciones poblacionales provistas por el Centro Centro Americano de Población del 2000 al 2050
 
-# Evolución de los delitos en el tiempo
+# Evolución del indice de delitos en el tiempo
 ```{r}
 evol_ano<-delitos_canton %>% filter(ano != 2019) %>% data.frame() %>% group_by(ano) %>% select(ano, poblacion, delitos) %>% summarise(delitos = sum(delitos, na.rm = T), poblacion = sum(poblacion, na.rm = T)) %>%  mutate(indice_delitos = 100*delitos / poblacion)
 
@@ -69,18 +79,19 @@ tm_view(set.view = 7.5)
 
 # Delitos por provincia
 ```{r}
+library(plotly)
 base2<-delitos_canton %>% 
   group_by(prov_nom2) %>%
   filter(ano!=2019)  %>%
   summarise(conteo=n()) 
 
 
-ggplot(base2,aes(prov_nom2,conteo))+
+ggplotly(ggplot(base2,aes(prov_nom2,conteo))+
   geom_col(aes(fill=prov_nom2))+
   scale_fill_brewer(palette = "Blues")+
   ggtitle("Número de delitos por provincia en Costa Rica, entre los años 2015 y 2018")+
   xlab("Provincia")+
-  ylab("Número de delitos")+theme_bw()
+  ylab("Número de delitos")+theme_bw() +coord_flip())
 ```
 
 
