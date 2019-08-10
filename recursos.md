@@ -32,6 +32,10 @@ recursos que se pueden revisar de manera gratuita.
 
 - Traducción al español del libro R for Data Science. Muy buen recurso con énfasis en el tidyverse
 
+[Ciencia de Datos para Gente Sociable](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/)
+
+ - Una buena introducción a la exploración y análisis de datos
+
 [Guía de estilo para R](http://www.fransvandunne.com/guia-de-estilo-para-r/)
 
 - ¿Porqué estilo en R? En esta guía encontrarás respuesta a esta pregunta y además recomendaciones sobre el estilo que deberías de implementar.
