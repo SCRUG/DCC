@@ -98,19 +98,46 @@ hcboxplot(x = diamonds$n, var = diamonds$Delito, var2 = diamonds$Genero,
 
 
 
+<!-- ```{r} -->
+<!-- library(collapsibleTree) -->
+<!--   collapsibleTreeSummary( -->
+<!--     bases_polic %>% group_by( Delito, Edad, ano) %>% summarise(n= n()), -->
+<!--     hierarchy = c( "Delito", "Edad", "ano"), -->
+
+
+<!--       root = "base_polic", -->
+<!--       width = 800, -->
+<!--       attribute = "n", -->
+<!--       zoomable = FALSE -->
+<!--   ) -->
+
+
+<!-- ``` -->
+# Distribución por año, delitos, sexo y edad
+
 ```{r}
-library(collapsibleTree)
-  collapsibleTreeSummary(
-    bases_polic %>% group_by( Delito, Edad, ano) %>% summarise(n= n()),
-    hierarchy = c( "Delito", "Edad", "ano"),
-  
-  
-      root = "base_polic",
-      width = 800,
-      attribute = "n",
-      zoomable = FALSE
-  )
+library(treemap)
+library(d3treeR)
+library(highcharter)
+library(RColorBrewer)
+completo <- bases_polic %>% group_by(ano, Delito, Genero, Edad) %>% summarise(delitos =n()) %>% data.frame()
 
-
+hctreemap2(completo,
+           group_vars = c("ano", "Delito", "Genero", "Edad"),
+           size_var = "delitos",
+           color_var = "delitos",
+           layoutAlgorithm = "squarified",
+           levelIsConstant = FALSE,
+           levels = list(
+             list(level = 1, dataLabels = list(enabled = TRUE)),
+             list(level = 2, dataLabels = list(enabled = FALSE)),
+             list(level = 3, dataLabels = list(enabled = FALSE)),
+             list(level = 4, dataLabels = list(enabled = FALSE))
+           )) %>% 
+  hc_colorAxis(minColor = brewer.pal(7, "Greens")[1],
+               maxColor = brewer.pal(7, "Greens")[7]) %>% 
+  hc_tooltip(pointFormat = "<b>{point.name}</b>:<br>
+                            Número de delitos: {point.value:,.0f} personas<br>
+                            Descripcion: {point.name:,.0f}")
 ```
 
