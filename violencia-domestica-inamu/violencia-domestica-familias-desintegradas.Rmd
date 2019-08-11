@@ -1,0 +1,90 @@
+---
+output: html_document
+---
+
+## **Datatón Colaboración Ciudadana**
+
+<br>
+
+### **¿Cuál es la relación entre la violencia doméstica y las familias desintegradas?**
+
+Usando los datos del gobierno abierto (Costa Rica), queremos analizar si hay una relacion entre los indices de violencia domestica y las familias que se desintegran, tomando los datos de pensiones alimentarias como familias desintegradas.
+
+### Fuente de datos
+
+**Violencia Domestica** <br>
+http://datosabiertospj.eastus.cloudapp.azure.com/dataset/violencia-domestica/resource/a58413a0-6e13-4e3a-b341-f4b4f9808966
+<br>
+
+**Femicidios** <br>
+http://datosabiertospj.eastus.cloudapp.azure.com/dataset/femicidios/resource/22170839-bbc4-45aa-a086-c83a79aea714
+<br>
+
+**Penciones Alimentarias** <br>
+http://datosabiertospj.eastus.cloudapp.azure.com/dataset/pensiones-alimentarias/resource/436a8174-ac54-4c22-95f5-62bf4b915ec9
+
+<br> <br>
+
+### Visualizacion de los datos de violencia domestica por canton
+
+https://public.tableau.com/profile/tomas.gutierrez#!/vizhome/DCC-INAMU/Sheet22?publish=yes
+
+<br>
+
+### Analisis Exploratorio de Datos
+
+```{r echo=FALSE, warning=FALSE}
+library(readxl)
+library(dplyr)
+library(ggplot2)
+```
+
+
+```{r}
+# carga de datos
+violencia_domestica <-read_excel("datos/PJCROD_VIOLENCIADOMESTICA_V1.xls")
+pensiones_alimenticias <-read_excel("datos/PJCROD_PENSIONESALIMENTARIAS_V1.xlsx")
+```
+
+```{r}
+# Comportamiento de violencia domestica
+str(violencia_domestica)
+
+  
+region <- violencia_domestica %>% 
+  select(NombreCircuito,Entrados,Anno,NombreMes) %>% 
+  filter(Anno=="2018",NombreMes=="Diciembre", as.double(Entrados)>100) %>% 
+  group_by(NombreCircuito) %>% 
+  arrange(desc(Entrados))
+  #summarise(cantidad=n()) %>% 
+ 
+ 
+ggplot(data=region, 
+       aes(y=Entrados, x = NombreCircuito) ) + 
+  geom_bar(stat = "identity") +
+  coord_flip()
+
+```
+
+
+```{r}
+# Comportamiento de pensiones alimenticias
+region2 <- pensiones_alimenticias %>% 
+  select(NombreCircuito,Entrados,Anno,NombreMes) %>% 
+  filter(Anno=="2018",NombreMes=="Diciembre", as.double(Entrados)>100) %>% 
+  group_by(NombreCircuito) %>% 
+  arrange(desc(Entrados))
+  #summarise(cantidad=n()) %>% 
+ 
+ 
+ggplot(data = region2, 
+       aes(y = Entrados, x = NombreCircuito) ) + 
+  geom_bar(stat = "identity") +
+  coord_flip()
+
+```
+
+
+
+
+
