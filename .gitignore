@@ -39,4 +39,6 @@ docs/
 .html
 *.html
 
-/SICOP/datos/*
+# Para el proyecto SICOP
+SICOP/datos/*
+

@@ -1,0 +1,40 @@
+---
+output: html_document
+---
+
+## **Datatón Colaboración Ciudadana**
+
+<br>
+
+### **¿Cuál es la inversión del INAMU en los circuitos con altos indices de violencia doméstica?**
+
+Pensamos que debería existir una buena inversión del INAMU en cuanto a temas de violencia domestica, para lo cual podemos utilizar los datos del poder judicial que nos indican los indices de violencia domestica por región para determinar los circuitos con mayores indices y así el INAMU pueda dar una mayor intervención.
+
+### Fuente de datos
+
+**Violencia Domestica** <br>
+http://datosabiertospj.eastus.cloudapp.azure.com/dataset/violencia-domestica/resource/a58413a0-6e13-4e3a-b341-f4b4f9808966
+<br>
+
+**Femicidios** <br>
+http://datosabiertospj.eastus.cloudapp.azure.com/dataset/femicidios/resource/22170839-bbc4-45aa-a086-c83a79aea714
+<br>
+
+**Penciones Alimentarias** <br>
+http://datosabiertospj.eastus.cloudapp.azure.com/dataset/pensiones-alimentarias/resource/436a8174-ac54-4c22-95f5-62bf4b915ec9
+
+<br>
+
+**Distribucion de fondos del INAMU** <br>
+https://www.inamu.go.cr/datosabiertos
+
+<br>
+
+### Visualizacion de los datos de violencia domestica por canton
+
+https://public.tableau.com/profile/tomas.gutierrez#!/vizhome/DCC-INAMU/Sheet22?publish=yes
+
+
+### Conclusiones
+
+Debido a que la informacion del INAMU es insuficiente con respecto a la distribucion de fondos moneitarios para prevenir la violencia domestica es insuficiente, nos fue imposible realizar el analisis.
