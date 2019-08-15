@@ -35,9 +35,6 @@ vignettes/*.pdf
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 
-docs/
-.html
-*.html
 
 # Para el proyecto SICOP
 SICOP/datos/*

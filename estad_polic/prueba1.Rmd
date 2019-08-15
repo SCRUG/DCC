@@ -1,0 +1,154 @@
+---
+title: "Estatísticas Policiales del Poder Judicial de Costa Rica"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+always_allow_html: yes
+output:
+  # html_document:
+  #   code_folding: hide
+  #   theme: spacelab
+  #   toc: yes
+  #   toc_float:
+  #     collapsed: no
+  
+  rmdformats::readthedown:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    code_folding: hide
+editor_options:
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+library(tidyverse)
+library(readxl)
+library(ggmap)
+library(rgdal)
+library(tmap)
+library(sf)
+library(highcharter)
+source("policia.R")
+```
+
+# Preguntas
+Basados en la exploración de datos abiertos provistos por el Poder Judicial, generamos las siguientes preguntas.
+
+-¿Cuál es la tendencia de crímenes por tipo de delito por año?
+
+-¿Cuál es el mes de mayor incidencia de ocurrencia de cada delito?
+
+-¿Cuál es la víctima más común por género?
+
+-¿Cuales son los tipos de delitos más frecuentes por provincia y por cantón?
+
+# Bases de datos dispobibles en el environment
+```{r}
+ls() 
+```
+
+# Creación de un indice de delitos cantonales
+Creamos un índice de delitos controlando las proyecciones de poblacionales del Centro Centroamericano de Poblacion
+$$indice delitos_{t, d} = 100 * delitos_{t, d} / poblacion_{t, d}  $$
+
+Se tomaron las bases de datos del Poder Judicial años 2015-2018 y se unieron a las proyecciones poblacionales provistas por el Centro Centro Americano de Población del 2000 al 2050
+
+# Evolución del indice de delitos en el tiempo
+```{r}
+evol_ano<-delitos_canton %>% filter(ano != 2019) %>% data.frame() %>% group_by(ano) %>% select(ano, poblacion, delitos) %>% summarise(delitos = sum(delitos, na.rm = T), poblacion = sum(poblacion, na.rm = T)) %>%  mutate(indice_delitos = 100*delitos / poblacion)
+
+hchart(evol_ano, "line", hcaes(x = ano, y = indice_delitos))
+
+```
+
+
+
+# Como se diferencian los delitos por canton
+```{r}
+delitos_cant <- delitos_canton %>% mutate(indice = 100 * delitos/poblacion)
+
+tmap_mode("view")
+tm_shape(delitos_cant) +
+  tm_polygons(col = "indice", palette = "Blues", n = 8, id= "dist_nom1")+
+#   tm_shape(delitos_canton)+
+#   tm_dots(col = "yellow", size = "componente", scale = 1, alpha = 0.5)
+tm_view(set.view = 7.5)
+```
+
+# Delitos por provincia
+```{r}
+library(plotly)
+base2<-delitos_canton %>% 
+  group_by(prov_nom2) %>%
+  filter(ano!=2019)  %>%
+  summarise(conteo=n()) 
+
+
+ggplotly(ggplot(base2,aes(prov_nom2,conteo))+
+  geom_col(aes(fill=prov_nom2))+
+  scale_fill_brewer(palette = "Blues")+
+  ggtitle("Número de delitos por provincia en Costa Rica, entre los años 2015 y 2018")+
+  xlab("Provincia")+
+  ylab("Número de delitos")+theme_bw() +coord_flip())
+```
+
+
+
+
+# Diferencia en la distribución de delitos por sexo para cada tipo de delito
+```{r}
+diamonds <- bases_polic %>% group_by(ano, Delito, Genero, Genero) %>% summarise(n=n())
+
+hcboxplot(x = diamonds$n, var = diamonds$Delito, var2 = diamonds$Genero,
+          outliers = FALSE) %>% 
+  hc_chart(type = "column")
+
+```
+
+
+
+<!-- ```{r} -->
+<!-- library(collapsibleTree) -->
+<!--   collapsibleTreeSummary( -->
+<!--     bases_polic %>% group_by( Delito, Edad, ano) %>% summarise(n= n()), -->
+<!--     hierarchy = c( "Delito", "Edad", "ano"), -->
+
+
+<!--       root = "base_polic", -->
+<!--       width = 800, -->
+<!--       attribute = "n", -->
+<!--       zoomable = FALSE -->
+<!--   ) -->
+
+
+<!-- ``` -->
+# Distribución por año, delitos, sexo y edad
+
+```{r}
+library(treemap)
+library(d3treeR)
+library(highcharter)
+library(RColorBrewer)
+completo <- bases_polic %>% group_by(ano, Delito, Genero, Edad) %>% summarise(delitos =n()) %>% data.frame()
+
+hctreemap2(completo,
+           group_vars = c("ano", "Delito", "Genero", "Edad"),
+           size_var = "delitos",
+           color_var = "delitos",
+           layoutAlgorithm = "squarified",
+           levelIsConstant = FALSE,
+           levels = list(
+             list(level = 1, dataLabels = list(enabled = TRUE)),
+             list(level = 2, dataLabels = list(enabled = FALSE)),
+             list(level = 3, dataLabels = list(enabled = FALSE)),
+             list(level = 4, dataLabels = list(enabled = FALSE))
+           )) %>% 
+  hc_colorAxis(minColor = brewer.pal(7, "Greens")[1],
+               maxColor = brewer.pal(7, "Greens")[7]) %>% 
+  hc_tooltip(pointFormat = "<b>{point.name}</b>:<br>
+                            Número de delitos: {point.value:,.0f} personas<br>
+                            Descripcion: {point.name:,.0f}")
+```
+
