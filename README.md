@@ -3,13 +3,13 @@
 
 Canal de comunicación: [comunidad gitter SCRUG](https://gitter.im/SCRUG/community) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/SCRUG/community)
 
---
+---
 
 El dataton fue un éxito total. Muchas gracias a todos por asisitir. Ojalá logremos seguir la discusion, el aprendizaje y la generación de nuevo código y discusiones aqui! Queda mucho por entender de los datos, y de aprender sobre R. 
 
 Si no estuviste en el dataton pero quieres ayudar a completar los análisis que estamos preparando aqui, esta bienvenido. Buscanos en [gitter](https://gitter.im/SCRUG/community) para hablar.
 
---
+---
 
 El San Carlos R User Group (SCRUG) organiza el primer Datatón Colaboración Ciudadana en Costa Rica el 10 de Agosto de 2019. El objetivo es que los participantes realicen análisis exploratorios con los datos abiertos disponibles del gobierno de Costa Rica usando el lenguaje de programación R.
 
