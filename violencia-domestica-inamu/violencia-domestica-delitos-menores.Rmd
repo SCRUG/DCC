@@ -1,0 +1,86 @@
+---
+output: html_document
+---
+
+## **Datatón Colaboración Ciudadana**
+
+<br>
+
+### **¿Cómo se relaciona el índice de violencia doméstica con el índice de otros delitos?**
+
+Usando los datos del gobierno abierto (Costa Rica), queremos saber si en zonas donde hay una gran cantidad de delitos menores son las mismas zonas con grandes indices de violencia domestica. <br> 
+Tambien gracias a Mauro Lepore ahora sabemos que parece relacionado a la teoria de las ventanas rotas. **¿Que delitos menores podrian detectarse tempranamente y evitar delitos mayores como violencia domestica severa?**.
+
+### Fuente de datos
+
+**Violencia Domestica** <br>
+http://datosabiertospj.eastus.cloudapp.azure.com/dataset/violencia-domestica/resource/a58413a0-6e13-4e3a-b341-f4b4f9808966
+<br>
+
+**Femicidios** <br>
+http://datosabiertospj.eastus.cloudapp.azure.com/dataset/femicidios/resource/22170839-bbc4-45aa-a086-c83a79aea714
+<br>
+
+**Penciones Alimentarias** <br>
+http://datosabiertospj.eastus.cloudapp.azure.com/dataset/pensiones-alimentarias/resource/436a8174-ac54-4c22-95f5-62bf4b915ec9
+
+**Informacion de otros delitos**
+http://datosabiertospj.eastus.cloudapp.azure.com/dataset/estadisticas-policiales
+
+### Visualizacion de los datos de violencia domestica por canton
+
+https://public.tableau.com/profile/tomas.gutierrez#!/vizhome/DCC-INAMU/Sheet22?publish=yes
+
+<br>
+
+### Analisis Exploratorio de Datos
+
+```{r cars}
+library(dplyr)
+library(kableExtra)
+library(tidyverse)
+library(ggplot2)
+```
+
+```{r}
+violenciaDomestica <- read.csv("datos/PJCROD_VIOLENCIADOMESTICA_V1.csv", header = TRUE,sep = ";",encoding = "UTF-8")
+View(violenciaDomestica)
+crimenesVarios<-read.csv("datos/PJCROD_POLICIALES_V1-2018.csv", header = TRUE,sep = ";",encoding = "UTF-8")
+View(crimenesVarios)
+
+names (crimenesVarios)
+names(violenciaDomestica)
+
+colnames(violenciaDomestica)<-c(
+"Annio","Mes","NombreMes","NombreMateria", "NombreCircuito","NombreDespacho","NombreTipoDespacho","CirculanteInicial",       
+ "CirculanteInicialLeg","Entrados","TestimoniosPiezas","Legajos",      
+ "Reentrados","TerminadosXImcompetencia", "AbandonadosOInactivos","Terminasdos"        ,     
+ "CirculanteFinal","CirculanteFinalLegajos" )
+
+colnames(crimenesVarios)<-c(  "Delito" ,"SubDelito","Fecha" ,"Mes","Annio" ,"Victima"  ,      
+   "SubVictima","Edad","Genero","Nacionalidad","Provincia", "Canton","Distrito")
+
+dfCrimenes<-crimenesVarios[,1:2]
+
+View(dfCrimenes)
+
+crimenesTipoDelito<-dfCrimenes %>% group_by(Delito) %>%
+                    summarise(Cantidad=n()) %>% arrange(desc(Cantidad))
+                    
+                    
+crimenesTipoDelito %>%kable() %>% kable_styling() 
+
+names(dfCrimenes)
+crimenesTiposubDelito<-dfCrimenes %>% filter(dfCrimenes$SubDelito %in% 
+                                               c("DISCUSION/RIÑA","FEMICIDIO","VIOLENCIA DOMESTICA") & dfCrimenes$Delito=="HOMICIDIO") %>%
+  group_by(Delito,SubDelito) %>%  
+  summarise(Cantidad=n()) %>% arrange(desc(Cantidad))
+crimenesTiposubDelito%>%kable() %>% kable_styling()
+
+
+
+datos <- ggplot(data=crimenesTiposubDelito, aes(x=crimenesTiposubDelito$SubDelito,
+                                                y=crimenesTiposubDelito$Cantidad, 
+                                                fill=crimenesTiposubDelito$SubDelito)) +
+  geom_bar(stat="identity")
+```

@@ -38,3 +38,5 @@ rsconnect/
 docs/
 .html
 *.html
+
+datos/*
