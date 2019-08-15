@@ -1,0 +1,21 @@
+---
+title: "SICOP"
+author: "SICOP Group"
+date: "10/8/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#Libreria para leer csv
+library(visdat)
+```
+
+```{r}
+sicop <- read_delim('datos/sicop.csv', ';')
+names(sicop)
+vis_dat(sicop)
+```

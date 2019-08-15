@@ -38,3 +38,7 @@ rsconnect/
 docs/
 .html
 *.html
+
+# Para el proyecto SICOP
+SICOP/datos/*
+
