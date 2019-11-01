@@ -5,9 +5,11 @@ Canal de comunicación: [comunidad gitter SCRUG](https://gitter.im/SCRUG/communi
 
 ---
 
-El dataton fue un éxito total. Muchas gracias a todos por asisitir. Ojalá logremos seguir la discusion, el aprendizaje y la generación de nuevo código y discusiones aqui! Queda mucho por entender de los datos, y de aprender sobre R. 
+El Datatón fue un éxito total. Muchas gracias a todos por asistir. Ojalá logremos seguir la discusión, el aprendizaje y la generación de nuevo código y discusiones aqui! Queda mucho por entender de los datos, y de aprender sobre R.
 
-Si no estuviste en el dataton pero quieres ayudar a completar los análisis que estamos preparando aqui, esta bienvenido. Buscanos en [gitter](https://gitter.im/SCRUG/community) para hablar.
+Estamos trabajando sobre el [Libro Control Ciudadano](https://github.com/SCRUG/LCC/pull/4) donde buscamos recopilar los resultados de los diferentes grupos en un formato accesible y más fácil de compartir. Ven y ayúdanos allí para preparar el contenido, o solo para leer los resultados.
+
+Si no estuviste en el Datatón pero quieres ayudar a completar los análisis que estamos preparando aquí, esta bienvenido. Búscanos en [gitter](https://gitter.im/SCRUG/community) para hablar.
 
 ---
 
@@ -26,7 +28,7 @@ Haremos menciones especiales para los resultados a nivel de:
  - La exploración de datos con mayor apego al [estilo de código](http://adv-r.had.co.nz/Style.html)
 
 *** 
-## ¿Quieres participar? Registrate en el formulario
+## ¿Quieres participar? Regístrate en el formulario
 El evento va ser en el CTEC del Tecnológico de Costa Rica, en Santa Clara de San Carlos. Si vienes de lejos, anúncialo porque quizás puedes encontrar posibilidades de compartir transporte. 
 
 Tenemos un [tiquete en Github](https://github.com/SCRUG/DCC/issues/8) en el
